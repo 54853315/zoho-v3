@@ -91,6 +91,15 @@ php artisan vendor:publish --tag="zoho-v3-migrations"
 php artisan migrate
 ```
 
+
+### Routes
+
+Package automatically registers the following route for Zoho OAuth2 callback handling:
+
+```php
+Route::get('zoho/oauth2callback', [\Asciisd\Zoho\Http\Controllers\ZohoController::class, 'oauth2callback']);
+```
+
 ### Environments
 maybe in some cases you wish to enforce zoho to use one of zoho's environments, so you can go to `AppServiceProvider`
 and use `Zoho::useEnvironment()` method
