@@ -32,7 +32,19 @@ You can install the package via `composer require`:
 ```bash
 composer require asciisd/zoho-v3
 ```
-After installing the package you can publish the config file with:
+
+### Register Service Provider
+
+If the package is not auto-discovered, add the service provider in `config/app.php`:
+
+```php
+'providers' => [
+    // ...existing providers...
+    Asciisd\Zoho\ZohoServiceProvider::class,
+],
+```
+
+After registering the provider, you can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="zoho-v3-config"
@@ -48,7 +60,7 @@ You'll need to add the following variables to your .env file. Use the credential
 application.
 
 ```dotenv
-ZOHO_AUTH_FLOW_TYPE=grantToken
+ZOHO_AUTH_FLOW_TYPE=grantTokenfv3-c
 ZOHO_CLIENT_ID="Code from Client Secrit Section"
 ZOHO_CLIENT_SECRET="Code from Client Secrit Section"
 ZOHO_REDIRECT_URI="${APP_URL}/zoho/oauth2callback"
