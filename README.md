@@ -60,7 +60,7 @@ You'll need to add the following variables to your .env file. Use the credential
 application.
 
 ```dotenv
-ZOHO_AUTH_FLOW_TYPE=grantTokenfv3-c
+ZOHO_AUTH_FLOW_TYPE=grantToken
 ZOHO_CLIENT_ID="Code from Client Secrit Section"
 ZOHO_CLIENT_SECRET="Code from Client Secrit Section"
 ZOHO_REDIRECT_URI="${APP_URL}/zoho/oauth2callback"
